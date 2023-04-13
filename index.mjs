@@ -10,7 +10,6 @@ import { echo, $ } from "zx";
 
 await $`git add .`;
 const outputCommit = await $`git commit -m "xxx"`;
-//echo(outputCommit);
-// const pull = await $`git pull origin master`;
+const pull = await $`git pull origin master`;
 
 // const push = await $`git push origin master`;
