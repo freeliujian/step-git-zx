@@ -1,2 +1,2 @@
 # step-git-zx
-use zx make to a git submit peoject
+use zx make to a git submit project

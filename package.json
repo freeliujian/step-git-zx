@@ -1,0 +1,19 @@
+{
+  "name": "step-git-zx",
+  "version": "1.0.0",
+  "description": "use zx make to a git submit project",
+  "module": "module",
+  "main": "./index.mjs",
+  "bin": "step-git-zx",
+  "scripts": {
+    "deploy": "zx ./index.mjs"
+  },
+  "keywords": [
+    "zx"
+  ],
+  "author": "jian.liu",
+  "license": "ISC",
+  "dependencies": {
+    "zx": "^7.2.1"
+  }
+}
