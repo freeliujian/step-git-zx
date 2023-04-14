@@ -1,9 +1,11 @@
 lockfileVersion: 5.4
 
 specifiers:
+  commander: ^10.0.0
   zx: ^7.2.1
 
 dependencies:
+  commander: 10.0.0
   zx: 7.2.1
 
 packages:
@@ -68,6 +70,11 @@ packages:
   /chalk/5.2.0:
     resolution: {integrity: sha512-ree3Gqw/nazQAPuJJEy+avdl7QfZMcUvmHIKgEZkGL+xOBzRvup5Hxo6LHuMceSxOabuJLJm5Yp/92R9eMmMvA==}
     engines: {node: ^12.17.0 || ^14.13 || >=16.0.0}
+    dev: false
+
+  /commander/10.0.0:
+    resolution: {integrity: sha512-zS5PnTI22FIRM6ylNW8G4Ap0IEOyk62fhLSD0+uHRT9McRCLGpkVNvao4bjimpK/GShynyQkFFxHhwMcETmduA==}
+    engines: {node: '>=14'}
     dev: false
 
   /data-uri-to-buffer/4.0.1:
