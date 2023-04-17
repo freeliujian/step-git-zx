@@ -3,17 +3,14 @@
 import { program } from "commander";
 import { $ } from 'zx';
 
-const $$ = (value) => {
-  $(value, { shell:true});
-}
-
 program.
   name('test').
-  option('-g --git').
+  option('-g --git [commitMessage]').
   action(async (value) => {
+    console.log(value)
     if (value.git) {
       await $`git add .`;
-      await $`git commit -m "xxx"`;
+      await $`git commit -m "${value.git}"`;
       await $`git pull origin master`;
       await $`git push origin master`;
     }
