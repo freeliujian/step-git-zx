@@ -2,11 +2,11 @@
   "name": "step-git-zx",
   "version": "1.0.0",
   "description": "use zx make to a git submit project",
-  "type": "commonjs",
-  "main": "./index.js",
+  "type": "module",
+  "main": "./index.mjs",
   "bin": "step-git-zx",
   "scripts": {
-    "deploy": "zx ./index.js"
+    "deploy": "zx ./index.mjs"
   },
   "keywords": [
     "zx"
