@@ -7,7 +7,7 @@ const autoGit = async (branchName, commitMessage, fileName) => {
     await $`git add ${(fileName)?fileName:'.'}`;
     await $`git commit -m "${commitMessage}"`;
     await $`git pull origin ${(branchName)?branchName:'master'}`;
-    await $`git push origin  ${(branchName)?branchName:'master'}`;
+   // await $`git push origin  ${(branchName)?branchName:'master'}`;
 };
 
 program.
