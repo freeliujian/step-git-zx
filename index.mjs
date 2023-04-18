@@ -1,6 +1,7 @@
 #! /usr/bin/env node
 
 import { program } from "commander";
+import pkg  from './package.json' assert { type: 'json' };
 import { $ } from 'zx';
 
 const autoGit = async (branchName, commitMessage, fileName) => {
@@ -10,27 +11,25 @@ const autoGit = async (branchName, commitMessage, fileName) => {
     await $`git push origin  ${branchName}`;
 };
 
+program.version(pkg.version);
+
 program.
   name('gitSubmit').
   description('使用zx写git的shell脚本自动push代码').
-  option('-f --file [fileName]').
-  option('-g,  --git  <commitMessage>').
+  option('-f --file [fileName]','需要保存的文件名字').
+  option('-g,  --git  <commitMessage>', '').
   option('-b --branch [branchName]').
-  argument('[ls]').
+  option('-c --create [repoAddress]').
+  action(async (options) => {
+    if (options.git) {
+      await autoGit({ ...options });
+    }
+  })
 
-  action(async (value, option) => {
-    console.log(value,option)
-    if (option.git) {
-      const { git, branchName = 'master', file = '.' } = option;
-      autoGit(branchName, git, file);
-    }
-    if (value) {
-      $`${value}`
-    }
-    return
-  });
-   
-program.parse(process.argv)
+
+program.parse(process.argv);
+
+const options = program.opts();
 
 
 
