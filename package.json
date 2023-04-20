@@ -4,7 +4,9 @@
   "description": "use zx make to a git submit project",
   "type": "module",
   "main": "./index.mjs",
-  "bin": "step-git-zx",
+  "bin": {
+    "sgz": "./index.mjs"
+  },
   "scripts": {
     "deploy": "node ./index.mjs"
   },

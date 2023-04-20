@@ -16,20 +16,19 @@ program.version(pkg.version);
 program.
   name('gitSubmit').
   description('使用zx写git的shell脚本自动push代码').
-  option('-f --file [fileName]','需要保存的文件名字').
-  option('-g,  --git  <commitMessage>', '').
-  option('-b --branch [branchName]').
+  option('-b --branch [branchName]', "master").
+  option('-f --file [fileName]','需要保存的文件名字', '.').
+  option('-g,  --git  <commitMessage>', "use zx auto-submit").
   option('-c --create [repoAddress]').
   action(async (options) => {
+    console.log(options)
     if (options.git) {
-      await autoGit({ ...options });
+      await autoGit(options.branch,options.git,options.file);
     }
   })
 
 
 program.parse(process.argv);
-
-const options = program.opts();
 
 
 
