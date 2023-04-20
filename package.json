@@ -16,7 +16,6 @@
   "author": "jian.liu",
   "license": "ISC",
   "dependencies": {
-    "commander": "^10.0.0",
     "zx": "^7.2.1"
   }
 }
