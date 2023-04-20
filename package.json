@@ -8,7 +8,7 @@
     "sgz": "./index.mjs"
   },
   "scripts": {
-    "deploy": "node ./index.mjs"
+    "start": "node ./index.mjs"
   },
   "keywords": [
     "zx"
